@@ -1,0 +1,7 @@
+.nav-item:hover{
+    border: 2px solid black;
+}
+#resume-id:hover{
+    cursor: pointer;
+    background: #ffb366;
+}
