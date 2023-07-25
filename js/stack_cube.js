@@ -1,4 +1,4 @@
-var scene, camera, renderer, div_number = 2.8,
+var scene, camera, renderer, div_number = 2.8, textureLoader,
     imgScene, imgRenderer, imgCubeContainer = document.getElementById("photo-cube")
     ;
 
@@ -6,21 +6,6 @@ var scene, camera, renderer, div_number = 2.8,
 init();
 document.getElementById("right-section").appendChild(renderer.domElement);
 window.addEventListener("resize", resize, false);
-
-
-function drawCube(x=4, y=4, z=4){ // the parameters are the dimentions
-    var geometry = new THREE.BoxGeometry(x, y, z);
-
-    const materials = [
-        new THREE.MeshBasicMaterial({ color: "skyblue" }), // Face avant (HTML.CSS)
-        new THREE.MeshBasicMaterial({ color: "red" }), // Face arrière (Lararel)
-        new THREE.MeshBasicMaterial({ color: "yellow" }), // Face gauche (JS)
-        new THREE.MeshBasicMaterial({ color: "blue" }), // Face droite (PHP)
-        new THREE.MeshBasicMaterial({ color: "white" }), // Face haut (Tailwind)
-        new THREE.MeshBasicMaterial({ color: "white" }), // Face bas ()
-      ];
-      return new THREE.Mesh(geometry, materials);
-}
 
 var stackCube = drawCube();
 
@@ -56,7 +41,6 @@ function animation(){
 
 function resize(){
     renderer.setSize(window.innerWidth/div_number, window.innerWidth/div_number);
-    //camera.aspect = window.innerWidth / (window.innerHeight);
     camera.aspect = 1.0;
     camera.updateProjectionMatrix();
     renderer.render(scene, camera);
@@ -74,4 +58,26 @@ function init(){
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth/div_number, window.innerWidth/div_number);
     renderer.setClearColor(0x000000, 0);
+}
+
+function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimentions
+    var geometry = new THREE.BoxGeometry(x, y, z);
+
+    textureLoader= new THREE.TextureLoader();
+    // here are loaded all the texture who will be used
+    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/git.png");
+    monImage = textureLoader.load("http://localhost/projects/porfolio/img/18ans.jpg");
+    laravelTexture = textureLoader.load("http://localhost/projects/porfolio/img/laravel.png");
+    htmlTexture = textureLoader.load("http://localhost/projects/porfolio/img/html.png");
+
+
+    const materials = [
+        new THREE.MeshBasicMaterial({ map: monImage }), // Face droite (HTML.CSS)
+        new THREE.MeshBasicMaterial({ color: "red" }), // Face gauche (Lararel)
+        new THREE.MeshBasicMaterial({ map: gitTexture }), // Face haut (JS)
+        new THREE.MeshBasicMaterial({color: "white", map: htmlTexture }), // Face bas (PHP)
+        new THREE.MeshBasicMaterial({ map: laravelTexture,}), // Face avant (Tailwind)
+        new THREE.MeshBasicMaterial({ color: "burlywood" }), // Face deriere ()
+      ];
+      return new THREE.Mesh(geometry, materials);
 }

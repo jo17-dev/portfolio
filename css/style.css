@@ -26,6 +26,7 @@ body{
     text-align: right;
     padding: 20px;
     padding-right: 10vw;
+    z-index: 1;
 }
 
 .nav-item{
@@ -47,11 +48,24 @@ body{
     flex-wrap: nowrap;
     margin: auto;
 }
+
 #left-section, #right-section{
     width: 45%;
 }
+
+#html-symbol{
+    position: absolute;
+    left: 5vw;
+    top: -2vh;
+    width: 60vw;
+    /* transform: rotate(-30deg); */
+    transform: scale(1.7) rotate(-20deg);
+    /* border: 1px solid; */
+}
+
 #right-section{
     margin-left: auto;
+    z-index: 1;
 }
 .title{
     margin-top: 10vh;
