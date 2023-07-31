@@ -61,12 +61,20 @@ body{
     /* transform: rotate(-30deg); */
     transform: scale(1.7) rotate(-20deg);
     /* border: 1px solid; */
+    z-index: 0;
 }
+
+
 
 #right-section{
     margin-left: auto;
     z-index: 1;
 }
+#first-title{
+    z-index: 4;
+    font-size: 6rem;
+}
+
 .title{
     margin-top: 10vh;
     font-size: xx-large;
@@ -115,6 +123,8 @@ body{
     display: flex;
     margin: auto;
     background-color: var(--section-bg);
+    margin-left: auto;
+    margin-right: auto;
 }
 #about{
     margin-top: 5vh;
@@ -207,4 +217,82 @@ body{
 }
 #threejs::before{
     width: 30%;
+}
+
+/* =============== Project section*/
+
+#project h2{
+    margin: auto;
+}
+
+#project{
+    display: flex;
+    flex-direction: column;
+}
+
+#project .item-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: 5vw;
+}
+.item{
+    /*margin: auto;*/
+    margin: 5px;
+    margin-top: 3em; 
+}
+
+.item-container{
+    display: block;
+}
+.item-img-container{
+    height: auto;
+    width: 200px;
+    /*margin-inline: auto; ================= ceci seras enlevé l'ors de l'operation du grid */
+}
+.item-img-container:hover::before{
+    display: block;
+    content: "You are currently brownsing on this";
+    height: 150px;
+    width: 200px;
+    background: linear-gradient(to top, var(--second-color), transparent 70%);
+    position: absolute;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.item-img{
+    border-radius: 3px 3px;
+    width: 100%;
+    height: auto;
+}
+.item-about{
+    display: block;
+    border: 2px solid orange;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 10px; 
+    margin-left: auto;
+    width: 50%;
+}
+.item-about button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.item-description{
+    width: 200px;
+}
+
+
+@keyframes appear{
+    0%{
+        backface-visibility: hidden;
+    }
+
+    100%{
+        backface-visibility: 1;
+    }
 }
