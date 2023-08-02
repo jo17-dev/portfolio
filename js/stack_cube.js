@@ -70,6 +70,7 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
     laravelTexture = textureLoader.load("http://localhost/projects/porfolio/img/laravel.png");
     cssTexture = textureLoader.load("http://localhost/projects/porfolio/img/css.jpg");
     htmltexture = textureLoader.load("http://localhost/projects/porfolio/img/html.jpg");
+    tailwindCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/tailwind.jpg")
 
 
 
@@ -79,7 +80,7 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
         new THREE.MeshBasicMaterial({ map: gitTexture }), // Face haut (JS)
         new THREE.MeshBasicMaterial({color: "white", map: cssTexture }), // Face bas (PHP)
         new THREE.MeshBasicMaterial({ map: laravelTexture,}), // Face avant (Tailwind)
-        new THREE.MeshBasicMaterial({ map: ajax }), // Face deriere ()
+        new THREE.MeshBasicMaterial({ map: tailwindCssTexture }), // Face deriere ()
       ];
       return new THREE.Mesh(geometry, materials);
 }

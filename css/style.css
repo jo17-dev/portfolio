@@ -8,17 +8,17 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box ;
+    box-sizing: content-box;
     text-align: center;
 }
 body{
     display: flex;
     flex-direction: column;
+    background-image: url("/img/html_symbol_orange1.png");
+    backdrop-filter: blur(4px);
 }
-
 #header{
     height: 100vh;
-    background: #ff9933;
     background: linear-gradient(to bottom, #ff9933, white);
 }
 
@@ -26,7 +26,7 @@ body{
     text-align: right;
     padding: 20px;
     padding-right: 10vw;
-    z-index: 4;
+    /* z-index: 4; */
 }
 
 .nav-item{
@@ -53,26 +53,28 @@ body{
     width: 45%;
 }
 
-#html-symbol{
+/* #html-symbol{
     position: absolute;
     left: 5vw;
-    top: -2vh;
+    top: 20vh;
     width: 60vw;
-    /* transform: rotate(-30deg); */
-    transform: scale(1.7) rotate(-20deg);
-    /* border: 1px solid; */
-    z-index: 0;
-    /* border: 1px solid green; */
+    transform: rotate(-30deg);
+    transform: scale(1);
+    border: 1px solid green;
+    cursor: row-resize;
+} */
+
+
+#left-section{
+    height: 400px;
+    /* z-index: 2; */
 }
-
-
-
 #right-section{
     margin-left: auto;
-    z-index: 1;
+    /* z-index: 1; */
 }
 #first-title{
-    z-index: 1;
+    /* z-index: 1; */
     font-size: 6rem;
 }
 
@@ -262,9 +264,10 @@ body{
 .item-img-container:hover::before{
     display: block;
     content: "You are currently brownsing on this";
-    height: 150px;
+    height: 60px;
     width: 200px;
-    background: linear-gradient(to top, var(--second-color), transparent 70%);
+    margin-top: 110px;
+    background: linear-gradient(to top, transparent 70%,  var(--second-color));
     position: absolute;
     animation-name: appear;
     animation-duration: 1s;
