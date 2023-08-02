@@ -287,6 +287,34 @@ body{
 }
 
 
+#contact-form{
+    width: 50%;
+    max-width: 450px;
+    border: 1px solid black;
+    margin-right: auto; 
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+#contact-form *{
+    margin: 4px;
+    padding-top: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    text-align: left;
+}
+#contact-form textarea{
+    height: 80px;
+    /*width: 380px;*/
+}
+#contact-form input[type="submit"]{
+    width: 90px;
+    text-align: center;
+    margin-left: auto;
+}
+
+
 @keyframes appear{
     0%{
         backface-visibility: hidden;
