@@ -1,4 +1,4 @@
-// this file contain all the non complex fonctionality
+// this file contain all the basci fonctionalities
 
 manageItemText();
 

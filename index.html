@@ -8,12 +8,13 @@
     <title>joel tsafack</title>
 </head>
 <body>
+    <noscript>You should enable javascript on your browser enter on this web site !</noscript>
     <header id="header">
         <nav id="nav-bar">
             <a href="#" class="nav-item">Home</a>
             <a href="#about" class="nav-item">About</a>
             <a href="#project" class="nav-item">Project</a>
-            <a href="" class="nav-item">Contact</a>
+            <a href="#contact" class="nav-item">Contact</a>
         </nav>
         <main id="main-home">
             <section id="left-section">
@@ -128,14 +129,27 @@
     </section>
     <!-- *****************Contact section -->
     <h1 class="title">Let's get in touch</h1>
-    <section class="section">
+    <section class="section" id="contact">
+        <div id="contact-info">
+            <ul>
+                <li><a href="">Joeltsafack1@gmail.com</a> </li>
+                <li><a href="">+237699305037</a></li>
+                <li><a href="">Github</a></li>
+                <li><a href="">Tweeter</a></li>
+            </ul>
+        </div>
         <form action="" method="POST" id="contact-form">
             <input type="text" name="name" placeholder="Enter your name">
             <input type="text" name="email" placeholder="Enter your email">
             <textarea name="content" >What do you think of this portfolio ?</textarea>
             <input type="submit" name="sendComment" value="Send">
+                <a href="mailto:joeltsafack1@gmail.com" id="email-button">send e-mail directly</a>
         </form>
     </section>
+
+    <footer id="page-footer">
+        <div class="side-line"></div><p>Made by <strong>Joel Tsafack</strong>, August 2023</p> <div class="side-line"></div>
+    </footer>
 
     <script src="./js/three.min.js"></script>
     <script src="./js/stack_cube.js"></script>

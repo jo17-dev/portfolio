@@ -65,17 +65,19 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
 
     textureLoader= new THREE.TextureLoader();
     // here are loaded all the texture who will be used
-    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/ajax.jpg");
+    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/git.jpg");
     ajax = textureLoader.load("http://localhost/projects/porfolio/img/ajax.jpg");
     laravelTexture = textureLoader.load("http://localhost/projects/porfolio/img/laravel.png");
-    htmlTexture = textureLoader.load("http://localhost/projects/porfolio/img/css.jpg");
+    cssTexture = textureLoader.load("http://localhost/projects/porfolio/img/css.jpg");
+    htmltexture = textureLoader.load("http://localhost/projects/porfolio/img/html.jpg");
+
 
 
     const materials = [
         new THREE.MeshBasicMaterial({ map: ajax }), // Face droite (HTML.CSS)
-        new THREE.MeshBasicMaterial({ color: "red" }), // Face gauche (Lararel)
+        new THREE.MeshBasicMaterial({ map: htmltexture }), // Face gauche (Lararel)
         new THREE.MeshBasicMaterial({ map: gitTexture }), // Face haut (JS)
-        new THREE.MeshBasicMaterial({color: "white", map: htmlTexture }), // Face bas (PHP)
+        new THREE.MeshBasicMaterial({color: "white", map: cssTexture }), // Face bas (PHP)
         new THREE.MeshBasicMaterial({ map: laravelTexture,}), // Face avant (Tailwind)
         new THREE.MeshBasicMaterial({ map: ajax }), // Face deriere ()
       ];
