@@ -2,12 +2,12 @@ var scene, camera, renderer, div_number = 2.8, textureLoader,
     imgScene, imgRenderer, imgCubeContainer = document.getElementById("photo-cube")
     ;
 
-
 init();
 document.getElementById("right-section").appendChild(renderer.domElement);
 window.addEventListener("resize", resize, false);
 
 var stackCube = drawCube();
+stackCube.rotation.x = Math.PI/6;
 
 var imgCube = drawCube(5,5,5);
 
@@ -28,10 +28,11 @@ animation();
 
 
 function animation(){
-    stackCube.rotation.x += 0.01;
-    stackCube.rotation.y += 0.01;
+    // stackCube.rotation.x -= 0.008;
+    stackCube.rotation.y += 0.008;
+    // stackCube.rotation.z += 0.008;
 
-    imgCube.rotation.x += 0.01;
+    imgCube.rotation.x += 0.001;
     imgCube.rotation.y += 0.01;
     
     renderer.render(scene, camera);
@@ -65,22 +66,25 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
 
     textureLoader= new THREE.TextureLoader();
     // here are loaded all the texture who will be used
-    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/git.jpg");
+    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/git.png");
     ajax = textureLoader.load("http://localhost/projects/porfolio/img/ajax.jpg");
     laravelTexture = textureLoader.load("http://localhost/projects/porfolio/img/laravel.png");
     cssTexture = textureLoader.load("http://localhost/projects/porfolio/img/css.jpg");
     htmltexture = textureLoader.load("http://localhost/projects/porfolio/img/html.jpg");
-    tailwindCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/tailwind.jpg")
+    tailwindCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/tailwind.jpg");
+    jsHtmlCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/htmlCssJs.jpg")
 
 
 
     const materials = [
         new THREE.MeshBasicMaterial({ map: ajax }), // Face droite (HTML.CSS)
-        new THREE.MeshBasicMaterial({ map: htmltexture }), // Face gauche (Lararel)
+        new THREE.MeshBasicMaterial({ map: jsHtmlCssTexture }), // Face gauche (Lararel)
         new THREE.MeshBasicMaterial({ map: gitTexture }), // Face haut (JS)
-        new THREE.MeshBasicMaterial({color: "white", map: cssTexture }), // Face bas (PHP)
-        new THREE.MeshBasicMaterial({ map: laravelTexture,}), // Face avant (Tailwind)
-        new THREE.MeshBasicMaterial({ map: tailwindCssTexture }), // Face deriere ()
+        new THREE.MeshBasicMaterial({map: htmltexture }), // Face bas (PHP)
+        new THREE.MeshBasicMaterial({ map: laravelTexture}), // Face avant (Tailwind)
+        new THREE.MeshBasicMaterial({ map: tailwindCssTexture }) // Face deriere ()
       ];
       return new THREE.Mesh(geometry, materials);
 }
+
+console.log(geometry);
