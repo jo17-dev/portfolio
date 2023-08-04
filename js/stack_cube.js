@@ -66,13 +66,13 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
 
     textureLoader= new THREE.TextureLoader();
     // here are loaded all the texture who will be used
-    gitTexture = textureLoader.load("http://localhost/projects/porfolio/img/git.png");
-    ajax = textureLoader.load("http://localhost/projects/porfolio/img/ajax.jpg");
-    laravelTexture = textureLoader.load("http://localhost/projects/porfolio/img/laravel.png");
-    cssTexture = textureLoader.load("http://localhost/projects/porfolio/img/css.jpg");
-    htmltexture = textureLoader.load("http://localhost/projects/porfolio/img/html.jpg");
-    tailwindCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/tailwind.jpg");
-    jsHtmlCssTexture = textureLoader.load("http://localhost/projects/porfolio/img/htmlCssJs.jpg")
+    gitTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/git.png");
+    ajax = textureLoader.load("https://joel-tsafack.netlify.app/img/ajax.jpg");
+    laravelTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/laravel.png");
+    cssTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/css.jpg");
+    htmltexture = textureLoader.load("https://joel-tsafack.netlify.app/img/html.jpg");
+    tailwindCssTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/tailwind.jpg");
+    jsHtmlCssTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/htmlCssJs.jpg")
 
 
 
