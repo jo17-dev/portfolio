@@ -12,7 +12,7 @@
     border-radius: 0 0 4px 4px;
   }
   
-  /* Handle on hover */
+  /* On hover */
   ::-webkit-scrollbar-thumb:hover {
     background: var(--main-color);
   }
@@ -138,7 +138,7 @@ body{
 .section{
     padding-top: 14px;
     padding-bottom: 14px;
-    width: 96vw;
+    width: 98vw;
     display: flex;
     /* margin: auto; */
     margin-top: 2em;
