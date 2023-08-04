@@ -34,7 +34,9 @@ body{
     display: flex;
     flex-direction: column;
     background-image: url("/img/html_symbol_orange1.png");
-    backdrop-filter: blur(4px);
+    background-size: 50%;
+    background-position: center;
+    backdrop-filter: blur(10px);
 }
 #header{
     height: 100vh;
