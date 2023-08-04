@@ -272,9 +272,9 @@ body{
 .item-img-container:hover::before{
     display: block;
     content: "You are currently brownsing on this";
-    height: 60px;
+    height: 70px;
     width: 200px;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     /* background: linear-gradient(to top, transparent 70%,  var(--second-color)); */
     background-color: rgba(241, 241, 241, 0.5);
     /* opacity: .8; */
