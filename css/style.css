@@ -289,6 +289,10 @@ body{
     content: "This UI have been think and done by me";
 }
 
+#votSystemProject:hover::before{
+    content: "I led a team of 3 people throughout this personal project";
+}
+
 .item-img{
     border-radius: 3px 3px;
     width: 100%;
