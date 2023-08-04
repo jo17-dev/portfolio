@@ -285,6 +285,10 @@ body{
     animation-timing-function: ease-in-out;
 }
 
+#fbCloneProject:hover::before{
+    content: "This UI have been think and done by me";
+}
+
 .item-img{
     border-radius: 3px 3px;
     width: 100%;
