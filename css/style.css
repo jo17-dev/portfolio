@@ -75,6 +75,7 @@ body{
 }
 #left-section{
     height: 400px;
+    height: 75vh;
     /* z-index: 2; */
 }
 #right-section{
@@ -255,16 +256,18 @@ body{
     flex-direction: row;
     margin-right: auto;
     margin-left: 5vw;
-}
-.item{
-    /*margin: auto;*/
-    margin: 5px;
-    margin-top: 3em; 
+    width: 100%;
 }
 
 .item-container{
     display: block;
 }
+.item{
+    margin: 5px;
+    margin-top: 3em;
+    /* width: ; */
+}
+
 .item-img-container{
     height: auto;
     width: 200px;
@@ -305,7 +308,8 @@ body{
     margin-top: 10px;
     border-radius: 10px; 
     margin-left: auto;
-    width: 50%;
+    /* width: 50%; */
+    width: 100px;
 }
 .item-about button{
     background-color: transparent;
@@ -317,6 +321,7 @@ body{
     width: 200px;
 }
 
+/* ***** derniere section */
 
 #contact{
     display: grid;

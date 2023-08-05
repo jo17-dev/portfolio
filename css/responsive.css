@@ -1,0 +1,86 @@
+/* This file is there to manage the "responsive" part of my site;
+* this site is basicly disigned by the laptop,so we don nedd to touch his part 
+*/
+
+/* For the tablet(<768px) */
+
+@media (max-width: 768px) {
+    #nav-bar{
+        position: fixed;
+        top: 50vh;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        margin-inline: 0;
+        width: 30px;
+        animation: left-right 0.5s ease-in-out 3s 2 alternate;
+    }
+    .nav-item{
+        text-align: right;
+    }
+
+    #project .item-container{
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }   
+
+    .item-img-container{
+        height: auto;
+        width: 100%;
+    }
+
+    .item{
+        width: 30%;
+        margin-inline: auto;
+        align-self: baseline;
+        /* display: grid; */
+    }
+
+    .item-img-container:hover::before{
+        opacity: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    #project .item-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item{
+        width: 90vw;
+    }
+    .item-description{
+        text-align: center;
+        margin-top: 0.9em;
+        width: 100%;
+        font-size: 1em;
+    }
+    .item-about{
+        width: 100px;
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-form{
+        margin-top: 2em;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@keyframes left-right {
+    0%{
+        transform: translatex(0);
+    }
+    50%{
+        transform: translatex(-25%);
+    }
+    100%{
+        transform: translatex(0%);
+    }
+}
