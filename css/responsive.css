@@ -73,6 +73,36 @@
     }
 }
 
+/* Phone management */
+
+@media (max-width: 425px) {
+    #main-home{
+        width: 98vw;
+        flex-direction: column;
+    }
+    #left-section, #right-section{
+        width: 100%;
+    }
+    #left-section{
+        height: auto;
+    }
+    #right-section{
+        margin: auto;
+        background-color: grey;
+    }
+
+    #about{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about .skills-container, #about section:nth-child(1){
+        margin-bottom: 2em;
+    }
+}
+
+
+
 @keyframes left-right {
     0%{
         transform: translatex(0);
