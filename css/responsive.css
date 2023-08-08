@@ -8,7 +8,7 @@
     #nav-bar{
         position: fixed;
         top: 50vh;
-        right: 0;
+        right: 4vw;
         display: flex;
         flex-direction: column;
         margin-inline: 0;
@@ -87,8 +87,7 @@
         height: auto;
     }
     #right-section{
-        margin: auto;
-        background-color: grey;
+        display: none;
     }
 
     #about{
@@ -98,6 +97,7 @@
 
     #about .skills-container, #about section:nth-child(1){
         margin-bottom: 2em;
+        width: 90vw;
     }
 }
 
