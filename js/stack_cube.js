@@ -10,6 +10,7 @@ var stackCube = drawCube();
 stackCube.rotation.x = Math.PI/6;
 
 var imgCube = drawCube(5,5,5);
+stackCube.rotation.x = Math.PI/6;
 
 scene.add(stackCube, imgCube);
 renderer.render(scene, camera);
@@ -32,8 +33,8 @@ function animation(){
     stackCube.rotation.y += 0.008;
     // stackCube.rotation.z += 0.008;
 
-    imgCube.rotation.x += 0.001;
-    imgCube.rotation.y += 0.01;
+    // imgCube.rotation.x += 0.001;
+    imgCube.rotation.y += 0.007;
     
     renderer.render(scene, camera);
     imgRenderer.render(imgScene, camera);
