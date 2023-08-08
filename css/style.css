@@ -33,10 +33,10 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url("http://localhost/projects/portfolio/img/html_symbol_orange1.png");
+    /* background-image: url("http://localhost/projects/portfolio/img/html_symbol_orange1.png"); */
     background-repeat: repeat-y;
     background-size: 50vw;
-    background-position: center;
+    background-position:left ;
     backdrop-filter: blur(10px);
 }
 #header{
