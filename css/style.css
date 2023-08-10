@@ -35,9 +35,10 @@ body{
     flex-direction: column;
     /* background-image: url("http://localhost/projects/portfolio/img/html_symbol_orange1.png"); */
     background-repeat: repeat-y;
-    background-size: 50vw;
+    background-size: cover;
     background-position:left ;
     backdrop-filter: blur(10px);
+    background-clip: content-box;
 }
 #header{
     height: 100vh;

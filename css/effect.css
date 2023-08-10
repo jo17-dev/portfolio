@@ -3,7 +3,6 @@
 }
 #resume-id:hover{
     cursor: pointer;
-    /* background: #ffb366; */
     background-color: var(--second-color);
 }
 #email-button:hover{
