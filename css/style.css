@@ -257,7 +257,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-right: auto;
-    margin-left: 5vw;
+    /*margin-left: 5vw; */
     width: 100%;
 }
 
