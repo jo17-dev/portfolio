@@ -84,6 +84,9 @@ body{
     margin-left: auto;
     /* z-index: 1; */
 }
+#right-section canvas{
+    margin: auto;
+}
 #first-title{
     /* z-index: 1; */
     font-size: 6rem;

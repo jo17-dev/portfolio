@@ -17,6 +17,9 @@
     }
     .nav-item{
         text-align: right;
+        border: 1px solid black;
+        width: 80px;
+        margin-top: 5px;
     }
 
     #project .item-container{
@@ -40,6 +43,7 @@
     .item-img-container:hover::before{
         opacity: 0;
     }
+
 }
 
 @media (max-width: 720px) {
@@ -87,6 +91,10 @@
         height: auto;
     }
     #right-section{
+        width: 100v;
+        height: 45vh;
+    }
+    #right-section canvas{
         display: none;
     }
 
