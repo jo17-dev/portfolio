@@ -226,6 +226,9 @@ body{
 #javascript::before{
     width: 80%;
 }
+#react::before{
+    width: 80%;
+}
 #laravel::before{
     width: 73%;
 }
@@ -240,6 +243,9 @@ body{
 }
 #threejs::before{
     width: 30%;
+}
+#node{
+    width: 65%;
 }
 
 /* =============== Project section*/
@@ -296,6 +302,10 @@ body{
 
 #votSystemProject:hover::before{
     content: "I led a team of 3 people throughout this personal project";
+}
+
+#luxorConstructionProjet:hover::before{
+    content: "I utilized React & native css to write properly this website (private project)";
 }
 
 .item-img{
