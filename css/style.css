@@ -109,6 +109,10 @@ body{
     align-items: center;
 }
 
+.colored{
+    color: var(--main-color);
+}
+
 #resume-id img{
     width: 20px;
 }
@@ -291,6 +295,10 @@ body{
     animation-name: appear;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
+}
+
+#luxorConstructionProjet:hover::before{
+    content: "I utilized React & native css to write properly this website";
 }
 
 #fbCloneProject:hover::before{
