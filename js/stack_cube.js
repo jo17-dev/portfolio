@@ -9,35 +9,19 @@ window.addEventListener("resize", resize, false);
 var stackCube = drawCube();
 stackCube.rotation.x = Math.PI/6;
 
-var imgCube = drawCube(5,5,5);
 stackCube.rotation.x = Math.PI/6;
 
-scene.add(stackCube, imgCube);
+scene.add(stackCube);
 renderer.render(scene, camera);
-
-
-imgScene = new THREE.Scene();
-imgScene.add(imgCube);
-imgRenderer = new THREE.WebGLRenderer();
-imgRenderer.setSize(imgCubeContainer.offsetWidth, imgCubeContainer.offsetHeight);
-imgCubeContainer.appendChild(imgRenderer.domElement);
-imgRenderer.render(imgScene, camera);
-imgRenderer.setClearColor(0x0000, 0);
 
 
 animation();
 
 
 function animation(){
-    // stackCube.rotation.x -= 0.008;
     stackCube.rotation.y += 0.008;
-    // stackCube.rotation.z += 0.008;
-
-    // imgCube.rotation.x += 0.001;
-    imgCube.rotation.y += 0.007;
     
     renderer.render(scene, camera);
-    imgRenderer.render(imgScene, camera);
     requestAnimationFrame(animation);
 }
 
