@@ -54,7 +54,8 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
     textureLoader= new THREE.TextureLoader();
     // here are loaded all the texture who will be used
     gitTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/git.png");
-    ajax = textureLoader.load("https://joel-tsafack.netlify.app/img/ajax.jpg");
+    // ajax = textureLoader.load("https://joel-tsafack.netlify.app/img/ajax.jpg");
+    react = textureLoader.load("https://joel-tsafack.netlify.app/img/react_logo.png")
     laravelTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/laravel.png");
     cssTexture = textureLoader.load("https://joel-tsafack.netlify.app/img/css.jpg");
     htmltexture = textureLoader.load("https://joel-tsafack.netlify.app/img/html.jpg");
@@ -64,7 +65,7 @@ function drawCube(x=4, y=4, z=4, textures=[]){ // the parameters are the dimenti
 
 
     const materials = [
-        new THREE.MeshBasicMaterial({ map: ajax }), // Face droite (HTML.CSS)
+        new THREE.MeshBasicMaterial({ map: react }), // Face droite (HTML.CSS)
         new THREE.MeshBasicMaterial({ map: jsHtmlCssTexture }), // Face gauche (Lararel)
         new THREE.MeshBasicMaterial({ map: gitTexture }), // Face haut (JS)
         new THREE.MeshBasicMaterial({map: htmltexture }), // Face bas (PHP)
