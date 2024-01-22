@@ -1,4 +1,4 @@
-var scene, camera, renderer, div_number = 2.8, textureLoader,
+var scene, camera, renderer, textureLoader, div_number = (window.innerWidth <= 425 ? 1.6 : 2.8) ,
     imgScene, imgRenderer, imgCubeContainer = document.getElementById("photo-cube")
     ;
 
@@ -26,6 +26,7 @@ function animation(){
 }
 
 function resize(){
+    div_number = window.innerWidth <= 425 ? 1.6 : 2.8
     renderer.setSize(window.innerWidth/div_number, window.innerWidth/div_number);
     camera.aspect = 1.0;
     camera.updateProjectionMatrix();
@@ -42,6 +43,7 @@ function init(){
 
 
     renderer = new THREE.WebGLRenderer();
+
     renderer.setSize(window.innerWidth/div_number, window.innerWidth/div_number);
     renderer.setClearColor(0x000000, 0);
 }

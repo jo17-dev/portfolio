@@ -1,5 +1,5 @@
 /* This file is there to manage the "responsive" part of my site;
-* this site is basicly disigned by the laptop,so we don nedd to touch his part 
+* this site is basicly disigned by the laptop,so we don need to touch his part 
 */
 
 /* For the tablet(<768px) */
@@ -95,7 +95,8 @@
         height: 45vh;
     }
     #right-section canvas{
-        display: none;
+        display: block;
+        border: 1px solid red;
     }
 
     #about{
