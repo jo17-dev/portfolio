@@ -5,6 +5,7 @@
     --text-basic: #131416; /* first text color - black  */ 
     --background-basic: #131516; /* white backgroun with points  */
     --radius-size: 0.2rem;
+    --card-height: 22rem;
 }
 
 *{
@@ -164,4 +165,61 @@ nav > .links li > a:hover{
 .right-position{
     margin-left: auto;
     margin-right: 0;
+}
+
+#project{
+    /* border: 1px solid black; */
+    padding: 3rem;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: left;
+}
+.card{
+    border: 1px solid var(--primary);
+    width: 25rem;
+    margin-top: 2rem;
+    margin-inline: 1.5rem;
+    min-height: var(--card-height);
+    /* max-height: var(--card-height);  */
+    border-radius: var(--radius-size);
+}
+
+.card .img-container{
+    height: calc(var(--card-height)/1.5);
+}
+.img-container .img{
+    width: 100%;
+    height: auto;
+}
+.card .card-description{
+    text-align: justify;
+    padding: 0.5rem;
+}
+
+.content-container{
+    padding: 0.5rem;
+    padding-bottom: 0;
+}
+.card .card-footer{
+    padding-inline: 0.5rem;
+}
+.card-footer button{
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem;
+    border: none;
+    border-radius: var(--radius-size);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+
+}
+
+.card-footer button:hover{
+    background-color: var(--primary-dark);
 }
