@@ -37,3 +37,10 @@
         transform: rotateZ('0deg');
     }
 }
+
+/* Animations and keyframes */
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

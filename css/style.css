@@ -4,6 +4,7 @@
     --foreground: white; /* seconda text color - white */  
     --text-basic: #131416; /* first text color - black  */ 
     --background-basic: #131516; /* white backgroun with points  */
+    --radius-size: 0.2rem;
 }
 
 *{
@@ -11,6 +12,14 @@
     padding: 0;
     color: var(--text-basic);
     transition-duration: 0.5s;
+}
+
+h2, h3{
+    text-align: center;
+    margin-top: 2rem;
+}
+h2{
+    font-size: x-large;
 }
 
 a{
@@ -24,6 +33,10 @@ nav{
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0.5rem;
+    /* position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1; */
 }
 
 nav > *{
@@ -101,10 +114,54 @@ nav > .links li > a:hover{
     padding: 0.8rem;
 }
 
-.marquee{
-    margin-top: 10%;
+.marquee-container{
+    margin-top: 8%;
     border-top: 1px solid var(--primary);
     padding: 0.5rem;
-    border-bottom: 1px solid var(--primary);
+    
     font-size: 1.2rem;
+    border-bottom: 1px solid var(--primary);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee-container .marquee{
+    animation: scroll 15s linear infinite;
+}
+
+
+/* Tech stack section */
+.tech-stack-package{
+    width: 65%;
+    border: 1px solid var(--primary);
+    border-radius: 0 var(--radius-size) var(--radius-size) 0;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 0.4rem;
+
+    display: flex;
+    flex-direction: row;
+}
+.tech-stack-package .tech-stack-item{
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tech-stack-package .tech-stack-item .content{
+    width: 4rem;
+    height: auto;
+}
+
+.tech-stack-package-right{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+.right-position{
+    margin-left: auto;
+    margin-right: 0;
 }
