@@ -15,6 +15,10 @@
     transition-duration: 0.5s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2, h3{
     text-align: center;
     margin-top: 2rem;
@@ -176,8 +180,8 @@ nav > .links li > a:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items: left;
+    justify-content:center;
+    align-items: center;
 }
 .card{
     border: 1px solid var(--primary);
@@ -222,4 +226,48 @@ nav > .links li > a:hover{
 
 .card-footer button:hover{
     background-color: var(--primary-dark);
+}
+
+#contact-title {
+    margin-top: 5rem;
+}
+
+.w-40{
+    width: 40%;
+    margin-inline: auto;
+}
+
+.w-40 > *{
+    vertical-align: top;
+}
+
+.section{
+    padding: 3rem;
+    display: inline-block;
+    width: calc(100% - 6rem);
+    /* border: 1px solid red; */
+}
+.contact-form-container{
+    margin-top: 0;
+    width: 50%;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.contact-form-container > .form {
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form > .form-item {
+    margin-top: 0.4rem;
+    padding: 0.4rem;
+}
+.form > .form-item > *{
+    width: 100%;
+    padding: 0.4rem 0 0.4rem 0;
+    font-size: medium;
 }
