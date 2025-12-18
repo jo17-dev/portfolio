@@ -6,6 +6,17 @@
     --background-basic: #131516; /* white backgroun with points  */
     --radius-size: 0.2rem;
     --card-height: 22rem;
+
+
+    --up-gradient-color-1: rgb(199, 10, 114);
+    --up-gradient-color-2: rgba(245, 207, 82, 0.8);
+
+    --down-gradient-color-1: rgba(245, 207, 82, 0.8);
+    --down-gradient-color-2: rgba(199, 10, 114);
+
+
+    --left-gradient-color-1: rgba(26, 248, 18, 0.6);
+    --left-gradient-color-2: rgba(199, 10, 53, 0.8);
 }
 
 *{
@@ -13,6 +24,10 @@
     padding: 0;
     color: var(--text-basic);
     transition-duration: 0.5s;
+}
+
+.background-layer{
+    z-index: -10;
 }
 
 html {
