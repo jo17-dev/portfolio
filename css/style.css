@@ -300,3 +300,102 @@ nav > .links li > a:hover{
     padding: 0.4rem 0 0.4rem 0;
     font-size: medium;
 }
+
+/* projec section */
+
+#projects{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.project{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 1rem;
+}
+
+.project > .project-summary {
+    width: 49%;
+}
+
+.project > .project-summary:nth-child(1){
+}
+
+.project > .project-summary:nth-child(1) > img {
+    width: 100%;
+}
+
+.project > .project-summary:nth-child(2) {
+    /* border: 1px solid blue; */
+}
+
+.separator{
+    border-left: 0.1rem solid var(--background-basic);
+}
+
+.project-summary > .title {
+    text-align: start;
+    font-size: 7rem;
+    color: var(--text-basic);
+}
+
+.project-summary > .description{
+    margin-top: 3rem;
+    width: 80%;
+    margin-right: auto;
+    font-size: 2rem;
+    line-height: 1.2rem;
+    font-size: medium;
+}
+
+.used-techs-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: .2rem;
+}
+
+button.used-tech-item{
+    background-color:var(--primary);
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+button.used-tech-item:hover{
+    background-color: var(--primary-dark);
+    cursor: pointer;
+}
+
+button.used-tech-item > span{
+    color: var(--foreground);
+    font-size: 1rem;
+}
+
+button.used-tech-item > img{
+    font-size: 1rem;
+}
+
+.used-techs-container .used-tech-item{
+    margin-inline-start: 1rem;
+    border: 1px solid var(--primary-dark);
+    padding: .2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.used-techs-container .used-tech-item img {
+    /* border: 1px solid blue; */
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.project-summary-subtitle {
+    font-size: large;
+    margin-top: 2rem;
+}
