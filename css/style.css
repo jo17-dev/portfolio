@@ -325,7 +325,8 @@ nav > .links li > a:hover{
 }
 
 .project > .project-summary:nth-child(1) > img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
 }
 
 .project > .project-summary:nth-child(2) {
@@ -338,7 +339,7 @@ nav > .links li > a:hover{
 
 .project-summary > .title {
     text-align: start;
-    font-size: 7rem;
+    font-size: 6rem;
     color: var(--text-basic);
 }
 
@@ -393,6 +394,10 @@ button.used-tech-item > img{
     /* border: 1px solid blue; */
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.used-techs-container .used-tech-item span {
+    padding-left: .4rem;
 }
 
 .project-summary-subtitle {
