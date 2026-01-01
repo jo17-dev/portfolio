@@ -1,27 +1,31 @@
 :root{
-    --primary: #d87d0f; /* orange button */
-    --primary-dark: #b2640f; /* orange button */
-    --foreground: white; /* seconda text color - white */  
-    --text-basic: #131416; /* first text color - black  */ 
-    --background-basic: #131516; /* white backgroun with points  */
-    --border-basic: rgba(175, 175, 175, 0.761);
-    --radius-size: 0.2rem;
-    --radius-size-lg: 1rem;
-    --card-height: 22rem;
+    --primary: #e67e22;
+    --primary-dark: #cf6d17;
 
+    --foreground: #1f2933; 
+    --text-basic: #4b5563;
+
+    --background-basic: #f7f8fa;
+    --card-background: #ffffff;
+
+    --border-basic: rgba(0, 0, 0, 0.1);
+    --radius-size: 0.3rem;
+    --radius-size-lg: 1rem;
+
+    --card-height: 22rem;
     --text-font-size: medium;
 
+    --footer-background-color: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    --footer-text-color: rgb(204, 204, 204);
 
+    --up-gradient-color-1: #ff9f43;
+    --up-gradient-color-2: #ff6f61;
 
-    --up-gradient-color-1: rgb(199, 10, 114);
-    --up-gradient-color-2: rgba(245, 207, 82, 0.8);
+    --down-gradient-color-1: #ff6f61;
+    --down-gradient-color-2: #ff9f43;
 
-    --down-gradient-color-1: rgba(245, 207, 82, 0.8);
-    --down-gradient-color-2: rgba(199, 10, 114);
-
-
-    --left-gradient-color-1: rgba(26, 248, 18, 0.6);
-    --left-gradient-color-2: rgba(199, 10, 53, 0.8);
+    --left-gradient-color-1: rgba(52, 211, 153, 0.7);
+    --left-gradient-color-2: rgba(96, 165, 250, 0.7);
 }
 
 *{
@@ -37,7 +41,6 @@
 
 html {
   scroll-behavior: smooth;
-  padding-inline: .6rem;
 }
 
 h2, h3{
@@ -436,7 +439,7 @@ button.used-tech-item > img{
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 1rem;
-    background-color: var(--foreground);
+    background-color: var(--card-background);
     margin-top: 2rem;
     border-radius: var(--radius-size-lg);
 }
@@ -466,7 +469,7 @@ button.used-tech-item > img{
     border-radius: var(--radius-size-lg);
     margin-top: 2rem;
     padding: 1rem;
-    background-color: var(--foreground);
+    background-color: var(--card-background);
 }
 .contact-opportunities > h3{
     text-align: start;
@@ -487,7 +490,7 @@ button.used-tech-item > img{
     margin-right: auto;
 
     padding: 2rem;
-    background-color: var(--foreground);
+    background-color: var(--card-background);
     margin-top: 2rem;
     border-radius: var(--radius-size-lg);
     margin-left: 2rem;
@@ -516,4 +519,90 @@ button.used-tech-item > img{
 
 #contact-form > .form-item > .submit-btn:hover{
     background-color: var(--primary-dark);
+}
+
+
+.me-img-container{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary);
+}
+
+.me-img-container .me-img {
+    width: 10rem;   
+    height: auto;
+}
+
+#footer {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background: var(--footer-background-color);
+}
+
+#footer * {
+    color: var(--footer-text-color);
+}
+
+
+#footer .about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+#footer .about-me > * {
+    width: 50vw;
+}
+
+#footer .about-me h3 {
+    color: var(--primary);
+    text-align: left;
+    font-size: x-large;
+}
+
+#footer .about-me-text-container > *{
+    margin-top: 1rem;
+}
+
+#footer .about-me-text-container > p:nth-child(1){
+    font-weight: bold;
+}
+
+#footer .about-me-text-container > p:nth-child(2){
+    font-weight: lighter;
+}
+
+#footer .about-me-text-container .header-contact{
+    margin-left: 0;
+}
+
+#footer .about-me-text-container .header-contact img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.horizontal-separator{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90vw;
+    border: 1px solid var(--primary);
+    margin-inline: auto;
+}
+
+.copyright-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.copyright-container div:nth-child(2) {
+    text-align: left;
+    font-style: italic;
 }
