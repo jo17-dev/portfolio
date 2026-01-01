@@ -28,11 +28,17 @@
     --left-gradient-color-2: rgba(96, 165, 250, 0.7);
 }
 
+@font-face {
+    font-family: quicksand;
+    src: url('../fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     color: var(--text-basic);
     transition-duration: 0.5s;
+    font-family: quicksand;
 }
 
 .background-layer{
