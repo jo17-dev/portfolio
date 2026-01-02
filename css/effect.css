@@ -1,3 +1,10 @@
+:root {
+    --background-circle-1-size: 800px;
+    --background-circle-2-size: 500px;
+
+    --animation-time-translate-y: 10s;
+}
+
 .nav-item:hover{
     border: 2px solid black;
 }
@@ -9,71 +16,42 @@
     background-color: #ffb366;
 }
 
-.buble-item{
-    width: 100px;
-    height: 100px;
-    border-radius: 50% 50%;
-    position: absolute;
-    background: radial-gradient(transparent, #ffb366a6);
-    animation: buble-item-animation 1s forwards infinite;
-}
-
-@keyframes buble-item-animation {
-    0%{
-        width: 0px;
-        height: 0px;
-        transform: rotate('0deg');
-    }
-
-    40%{
-        width: 100px;
-        height: 100px;
-        transform: rotateZ('45deg');
-    }
-
-    100%{
-        width: 0px;
-        height: 0px;
-        transform: rotateZ('0deg');
-    }
-}
-
-/* Animations and keyframes */
-
-@keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-#up{
+#backdrop-circle-container{
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    width: auto;
     position: fixed;
-    height: 800px;
-    width: 800px;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+
+    animation: rotate-360 20s forwards infinite;
+}
+
+#up{
+    height: var(--background-circle-1-size);
+    width: var(--background-circle-1-size);
     border-radius: 50%;
     background-image: radial-gradient(var(--up-gradient-color-2), transparent);
     filter: blur(80px);
-    animation: gradient-auto-moving-1 20s infinite;
 }
 
-#down{
-    position: fixed;
-    right: 0px;
-    height: 500px;
-    width: 500px;
+#down-right{
+    height: var(--background-circle-1-size);
+    width: var(--background-circle-1-size);
+    background-image: linear-gradient(80deg, var(--left-gradient-color-1), var(--left-gradient-color-2));
+    border-radius: 80%;
+    filter: blur(80px);
+}
+
+#down-left{
+    height: var(--background-circle-2-size);
+    width: var(--background-circle-2-size);
     border-radius: 80%;
     background-image: linear-gradient(80deg, var(--down-gradient-color-1), var(--down-gradient-color-2));
     filter: blur(80px);
-    animation: gradient-auto-moving-2 20s infinite;
-}
-
-#left{
-    position: fixed;
-    right: 0px;
-    height: 500px;
-    width: 500px;
-    border-radius: 80%;
-    background-image: linear-gradient(80deg, var(--left-gradient-color-1), var(--left-gradient-color-2));
-    filter: blur(80px);
-    animation: gradient-auto-moving-1 20s reverse infinite;
 }
 
 .nav-item:hover{
@@ -95,6 +73,7 @@
     background: radial-gradient(transparent, #ffb366a6);
     animation: buble-item-animation 1s forwards infinite;
 }
+
 
 @keyframes buble-item-animation {
     0%{
@@ -123,30 +102,49 @@
   100% { transform: translateX(-100%); }
 }
 
-@keyframes gradient-auto-moving-1 {
-    0%, 100%{
-        /* top: -100px;
-        right: 100px; */
-
-        transform: translateY(100px);
-        transform: translateX(-100px);
-        
+@keyframes buble-item-animation {
+    0%{
+        width: 0px;
+        height: 0px;
+        transform: rotate('0deg');
     }
 
-    70%{
-        /* top: 700px;
-        left: 0px; */
-        transform: translateX(0px);
-        transform: translateY(-700px);
+    40%{
+        width: 100px;
+        height: 100px;
+        transform: rotateZ('45deg');
+    }
+
+    100%{
+        width: 0px;
+        height: 0px;
+        transform: rotateZ('0deg');
     }
 }
 
-@keyframes gradient-auto-moving-2 {
-    0%, 100%{
-        right: -100px;
+@keyframes translate-y {
+    from{
+        transform: translateX(-50%);
     }
 
-    70%{
-        right: 700px;
+    to{
+        transform: translateX(50%);
+    }
+}
+
+/* Animations and keyframes */
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes rotate-360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

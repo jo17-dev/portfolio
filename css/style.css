@@ -26,6 +26,8 @@
 
     --left-gradient-color-1: rgba(52, 211, 153, 0.7);
     --left-gradient-color-2: rgba(96, 165, 250, 0.7);
+
+    --box-shadow-light: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 @font-face {
@@ -438,6 +440,10 @@ button.used-tech-item > img{
     max-width: 600px;
     margin-left: auto;
     margin-right: 0;
+}
+
+.contact-infos-item, .contact-form-container, .contact-opportunities {
+    box-shadow: var(--box-shadow-light);
 }
 
 .contact-infos-item{
