@@ -396,13 +396,25 @@ button.used-tech-item:hover{
     cursor: pointer;
 }
 
-button.used-tech-item > span{
+button.used-tech-item > a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    alignment-baseline: central;
+}
+
+button.used-tech-item span{
     color: var(--background-basic);
     font-size: 1rem;
 }
 
-button.used-tech-item > img{
+button.used-tech-item img{
     font-size: 1rem;
+}
+
+button.used-tech-item img.smaller-size{
+    width: 2rem;
 }
 
 .used-techs-container .used-tech-item{
