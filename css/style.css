@@ -5,8 +5,11 @@
     --foreground: #1f2933; 
     --text-basic: #4b5563;
 
+    --page-cover-background: #1f29337d;
+
     --background-basic: #f7f8fa;
     --card-background: #ffffff;
+    --disabled-color: rgb(179, 179, 179);
 
     --border-basic: rgba(0, 0, 0, 0.1);
     --radius-size: 0.3rem;
@@ -28,6 +31,8 @@
     --left-gradient-color-2: rgba(96, 165, 250, 0.7);
 
     --box-shadow-light: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    --space-avg: .4rem; /* average space arround the app */
 }
 
 @font-face {
@@ -112,7 +117,6 @@ nav > .links li > a:hover{
 
 .btn{
     background-color: var(--primary);
-    padding: 0.5rem;
     padding-inline: 1rem;
     border: none;
     border-radius: 0.2rem;
@@ -121,6 +125,13 @@ nav > .links li > a:hover{
 }
 .btn:hover{
     background-color: var(--primary-dark);
+}
+
+
+.btn:disabled {
+    background-color: var(--disabled-color);
+    color: var(--foreground);
+    text-decoration: line-through;
 }
 
 .header-contact{
@@ -138,6 +149,9 @@ nav > .links li > a:hover{
 }
 
 #contact-btn{
+    color: var(--background-basic);
+    padding-top: 0;
+    padding-bottom: 0;
     margin-right: 4rem;
     padding-inline: 2rem;
     cursor: pointer;
@@ -151,7 +165,7 @@ nav > .links li > a:hover{
 }
 #main-description{
     text-align: center;
-    max-width: 300px;
+    max-width: 350px;
     margin-inline: auto;
     margin-top: 3%;
     font-size: larger;
@@ -177,7 +191,7 @@ nav > .links li > a:hover{
 }
 
 .marquee-container .marquee{
-    animation: scroll 15s linear infinite;
+    animation: scroll 25s linear infinite;
 }
 
 
@@ -321,8 +335,8 @@ nav > .links li > a:hover{
 /* projec section */
 
 #projects{
-    /* border: 1px solid red; */
-    width: 100%;
+    width: calc(100% - 3rem);
+    margin-inline: auto;
 }
 
 .project{
@@ -367,12 +381,13 @@ nav > .links li > a:hover{
     flex-direction: row;
     align-items: center;
     margin-top: .2rem;
+    flex-wrap: wrap;
 }
 
 button.used-tech-item{
     background-color:var(--primary);
     border: none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--box-shadow-light);
 }
 
 
@@ -382,7 +397,7 @@ button.used-tech-item:hover{
 }
 
 button.used-tech-item > span{
-    color: var(--foreground);
+    color: var(--background-basic);
     font-size: 1rem;
 }
 
@@ -392,12 +407,14 @@ button.used-tech-item > img{
 
 .used-techs-container .used-tech-item{
     margin-inline-start: 1rem;
-    border: 1px solid var(--primary-dark);
+    margin-top: 1rem;
     padding: .2rem;
+    padding-right: .4rem;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: var(--box-shadow-light);
 }
 
 .used-techs-container .used-tech-item img {
@@ -525,8 +542,12 @@ button.used-tech-item > img{
     border-radius: var(--radius-size);
     border: none;
     padding: .6rem;
-    color: var(--foreground);
     background-color: var(--primary);
+    box-shadow: var(--box-shadow-light);
+}
+
+#contact-form > .form-item > .submit-btn {
+    color: var(--background-basic);
 }
 
 #contact-form > .form-item > .submit-btn:hover{
@@ -617,4 +638,45 @@ button.used-tech-item > img{
 .copyright-container div:nth-child(2) {
     text-align: left;
     font-style: italic;
+}
+
+#window-cover{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--page-cover-background);
+}
+
+/*** notice popup ****/
+#notice-popup {
+    position: fixed;
+    width: 40vw;
+    /* height: 50%; */
+    top: 4rem;
+    left: calc(50vw - 20vw);
+    border-radius: var(--radius-size);
+    background-color: var(--card-background);
+    padding: .8rem;
+}
+
+#notice-popup footer {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+
+#notice-popup footer .notice-ok-btn{
+    padding: .4rem;
+    padding-inline: 1rem;
+    color: var(--background-basic);
+}
+
+#notice-popup .notice-title, #notice-popup .notice-description {
+    margin-top: 1rem;
 }
