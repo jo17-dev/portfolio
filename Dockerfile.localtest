@@ -1,0 +1,14 @@
+# This file has been made to test html&css in others devices within the same network.. 
+# which i believe could be interesting if you want to test somthing with a real device without efforts
+
+FROM nginx:stable
+
+WORKDIR /usr/share/nginx/html
+
+COPY ./index.html ./index.html
+COPY ./css ./css
+COPY ./fonts ./fonts
+COPY ./img ./img
+COPY ./js ./js
+COPY ./videos ./videos
+RUN nginx -v

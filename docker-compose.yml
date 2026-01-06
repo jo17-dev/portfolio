@@ -1,0 +1,8 @@
+services:
+  html:
+    build:
+      context: .
+      dockerfile: Dockerfile.localtest
+    container_name: porfolio
+    ports:
+      - "80:80"

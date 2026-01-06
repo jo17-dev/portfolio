@@ -1,6 +1,16 @@
 
 
 document.addEventListener("DOMContentLoaded", (e)=>{
+
+    const navBarHTMLElement = document.getElementById('header-nav-bar');
+    const menuBurger = document.getElementById('burger-menu-container');
+    const navManager = new ToggleManager("retracted-state", [navBarHTMLElement, menuBurger]);
+
+    navBarHTMLElement.addEventListener('click', ()=>{
+        navManager.toggle();
+    });
+
+
     const windowCover = document.createElement('div');
     windowCover.setAttribute("id", "window-cover");
 
@@ -47,4 +57,53 @@ function createPopupElement(title, description, onClickedYes = ()=>{}){
     popup.append(h3, p, footer);
 
     return popup;
+}
+
+
+class ToggleManager {
+    constructor (toogleableClass, toggelableHTMLElement = []){
+        this.retractedStateClass = toogleableClass;
+        this.toggelableHTMLElement = toggelableHTMLElement;
+    }
+
+    retract(){
+        console.log("retracting nav bar");
+
+        if(!this.isRetracted ){
+            for(let i=0; i< this.toggelableHTMLElement.length; i++){
+                this.toggelableHTMLElement[i].classList.add(this.retractedStateClass);
+            }
+        }else{
+            console.log("already retracted");
+        }
+
+    }
+
+    extend(){
+        console.log("extending nav bar");
+
+        if(this.isRetracted){
+            for(let i=0; i< this.toggelableHTMLElement.length; i++){
+                this.toggelableHTMLElement[i].classList.remove(this.retractedStateClass);
+            }
+        }else{
+            console.log("already extended");
+        }
+    }
+
+    toggle(){
+        if(this.isRetracted){
+            this.extend()
+        }else{
+            this.retract()
+        }
+    }
+
+    get isRetracted() {
+        if(this.toggelableHTMLElement.length > 0){
+            return this.toggelableHTMLElement[0].classList.contains(this.retractedStateClass);
+        }else{
+            return false;
+        }
+    }
 }

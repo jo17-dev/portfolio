@@ -2,123 +2,217 @@
 * this site is basicly disigned by the laptop,so we don need to touch his part 
 */
 
+
+
+@media (max-width: 1024px) {
+    .project:nth-child(1){
+        margin-top: 1rem;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    .project > .project-summary {
+        width: 80%;
+    }
+
+    .separator{
+        display: none;
+    }
+
+    .project > .project-summary:nth-child(1) > img {
+        max-width: 100%;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+    }
+}
+
+
 /* For the tablet(<768px) */
 
+
 @media (max-width: 768px) {
-    #nav-bar{
-        position: fixed;
-        top: 50vh;
-        right: 4vw;
-        display: flex;
+
+    nav{
         flex-direction: column;
-        margin-inline: 0;
-        width: 30px;
-        animation: left-right 0.5s ease-in-out 3s 2 alternate;
-    }
-    .nav-item{
-        text-align: right;
-        border: 1px solid black;
-        width: 80px;
-        margin-top: 5px;
-    }
-
-    #project .item-container{
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-    }   
-
-    .item-img-container{
-        height: auto;
         width: 100%;
-    }
-
-    .item{
-        width: 30%;
+        padding: 0;
         margin-inline: auto;
-        align-self: baseline;
-        /* display: grid; */
+        background-color: var(--background-basic);
+        padding-bottom: .5rem;
     }
 
-    .item-img-container:hover::before{
-        opacity: 0;
+    nav > * {
+        margin-inline: 1rem;
     }
 
-}
 
-@media (max-width: 720px) {
-    #project .item-container{
+    nav > #burger-menu-container{
+        width: 3rem;
+        height: 3rem;
+        margin-left: auto;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav > #burger-menu-container > div{
+        background-color: var(--text-basic);
+        height: 4px;
+        width: 100%;
+    }
+
+    nav > #burger-menu-container > div:nth-child(1){
+        /* transform: translateY(1.4rem) rotate(90deg); */
+        transform: translateY(1.4rem) rotate(45deg);
+    }
+
+    nav > #burger-menu-container > div:nth-child(2){
+        display: none;
+    }
+
+    nav > #burger-menu-container > div:nth-child(3){
+        transform: translateY(1.1rem) rotate(-45deg);
+    }
+
+
+    nav > .links {
+        flex-direction: column; 
+        margin-inline: auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav > .links li{
+        width: 100%;
+        margin-inline: 0px;
+    }
+
+    nav > .links li > a{
+        display: block;
+        padding-inline: 1.5rem;
+        width: var(100% - 1.5rem);
+    }
+
+    /* nav retracted state */
+    nav.retracted-state {
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    nav.retracted-state > .links, nav.retracted-state > #contact-btn {
+        display: none;
+    }
+
+    nav.retracted-state > #burger-menu-container{
+        width: 3rem;
+        height: 3rem;
+        margin-left: auto;
+        transform: none;
+    }
+
+    nav.retracted-state > #burger-menu-container > div{
+        background-color: var(--text-basic);
+        height: 4px;
+        width: 100%;
+        margin-top: 10px;
+        display: block;
+        transform: none;
+    }
+
+
+    #contact-btn{
+        margin-right: .5rem;
+        margin-inline-start: auto;
+        margin-top: .6rem;
+        padding: .8rem;
+        width: fit-content;
+    }
+
+    #contact-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-section > * {
+        width: 100%;
+        margin-inline: auto;
+        padding: 1rem;
+    }
+
+    .contact-form-container{
+        max-width: calc(600px - 2rem); /** 2rem is the total paddinng of contact section */
+    }
+
+    #footer .about-me {
         flex-direction: column;
     }
 
-    .item{
-        width: 90vw;
-    }
-    .item-description{
-        text-align: center;
-        margin-top: 0.9em;
-        width: 100%;
-        font-size: 1em;
-    }
-    .item-about{
-        width: 100px;
+    #notice-popup{
+        width: 85vw;
+        left: calc(50vw - 45vw);
+        top: calc(45vh);
     }
 
-    #contact{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #contact-form{
-        margin-top: 2em;
-        width: 100%;
-        margin: auto;
+    #notice-popup footer .notice-ok-btn{
+        padding: .8rem;
     }
 }
-
-/* Phone management */
 
 @media (max-width: 425px) {
-    #main-home{
-        width: 98vw;
-        flex-direction: column;
-    }
-    #left-section, #right-section{
+    #projects{
         width: 100%;
     }
-    #left-section{
-        height: auto;
-    }
-    #right-section{
-        width: 100v;
-        height: 45vh;
-    }
-    #right-section canvas{
-        display: block;
+
+    .project > .project-summary {
+        width: 90%;
     }
 
-    #about{
+    .project-summary > .title {
+        font-size: xx-large;
+    }
+
+    #contact-section {
+        padding-inline: .2rem;
+    }
+
+    #contact-section > * {
+        width: 90vw;
+        margin-inline: auto;
+        padding-inline: .2rem;
+        margin-inline: auto;
+    }
+    .contact-infos-container{
+        width: 100%;
+    }
+    .contact-form-container{
+        padding: 1rem;
+    }
+
+    #footer{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #footer .about-me > * {
+        width: 100%;
+    }
+
+    .horizontal-separator{
+        width: 100%;
+    }
+
+    .copyright-container{
         display: flex;
         flex-direction: column;
     }
 
-    #about .skills-container, #about section:nth-child(1){
-        margin-bottom: 2em;
-        width: 90vw;
+    .copyright-container > *{
+        margin-top: 1rem;
     }
-}
 
-
-
-@keyframes left-right {
-    0%{
-        transform: translatex(0);
-    }
-    50%{
-        transform: translatex(-25%);
-    }
-    100%{
-        transform: translatex(0%);
-    }
 }
